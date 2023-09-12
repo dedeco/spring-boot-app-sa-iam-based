@@ -19,6 +19,7 @@ public class CloudSqlAutoIamAuthnDataSource extends HikariDataSource {
         GoogleCredentials credentials;
         try {
             credentials = GoogleCredentials.getApplicationDefault();
+
         } catch (IOException err) {
             throw new RuntimeException(
                     "Unable to obtain credentials to communicate with the Cloud SQL API", err);

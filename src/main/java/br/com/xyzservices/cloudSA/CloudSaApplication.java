@@ -20,7 +20,7 @@ public class CloudSaApplication {
 		HikariConfig config = new HikariConfig();
 
 		config.setJdbcUrl("jdbc:postgresql://127.0.0.1:5432/pagila");
-		config.setUsername("andresousa@google.com");
+		config.setUsername("alloy-db-poc@andresousa-bvs.iam");
 		config.addDataSourceProperty("ssl", "true");
 		config.addDataSourceProperty("sslmode", "disable");
 		// TODO: configure client certs
