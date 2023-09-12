@@ -1,4 +1,5 @@
-#  Spring boot app connecting to AlloyDb by JDBC using SA mitigating Short lived credentials - IAM based
+#  Spring boot app connecting to AlloyDb 
+Spring boot app with JDBC SA mitigating Short lived credentials - IAM based
 
 ## Install Java 17
 See https://sdkman.io/usage
@@ -8,13 +9,13 @@ See https://cloud.google.com/alloydb/docs/connect-external
 
 For this sample, I had set up an intermediary virtual machine (VM) to connect to my cluster, as follows:
 1. Create a sample-vm
-2. Using SSH install the alloydb proxy. [Here more details](https://cloud.google.com/alloydb/docs/auth-proxy/connect)
+2. Using SSH install the alloydb proxy. [Here more details](https://cloud.google.com/alloydb/docs/auth-proxy/connect).
 3. Run the proxy inside the VM:
 ```bash
 ./alloydb-auth-proxy \
 "projects/<PROJECT-ID>/locations/us-central1/clusters/pagilacls/instances/pagila"
 ```
-4. At the local machine create a tunnel. [Here mode details](https://cloud.google.com/iap/docs/using-tcp-forwarding)
+4. At the local machine create a tunnel. [Here more details](https://cloud.google.com/iap/docs/using-tcp-forwarding).
 ```bash
 gcloud compute ssh vm-sample \
     --tunnel-through-iap \
